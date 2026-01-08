@@ -1,0 +1,22 @@
+{
+  "name": "Studio_Scripts",
+  "tree": {
+    "$className": "DataModel",
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+
+    "StarterGui": {
+      "UI": {
+        "$path": "src/ui"
+     }
+    }
+   }
+  }
+
+
