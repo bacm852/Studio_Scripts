@@ -1,1 +1,1 @@
-print("Hello world, from Vs code for gitHub / client!")
+print("Hello world, from Vs code for gitHub!")
