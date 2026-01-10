@@ -1,3 +1,7 @@
 return function()
-	print("Hello, world!")
+	print("Client")
 end
+
+return function()
+     print("Server")
+end	
