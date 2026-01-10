@@ -47,7 +47,7 @@ local function checkAccess(player)
 	-- 3. If no conditions are met, kick them
 	player:Kick(SETTINGS.KICK_MESSAGE)
 end
-
+	
 -- Run for players joining
 Players.PlayerAdded:Connect(checkAccess)
 
