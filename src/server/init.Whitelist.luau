@@ -81,7 +81,7 @@ local function checkAccess(player)
 	
 	-- 1. Check if they are in the manual UserID list
 	if SETTINGS.WHITELISTED_IDS[player.UserId] then
-		print("✅ " .. player.Name .. " authorized via Manual Whitelist.")
+		print("✅" .. player.Name .. " authorized via Manual Whitelist.")
 		return true
 	end
 	
@@ -90,17 +90,17 @@ local function checkAccess(player)
 		local success, ownsPass = checkGamePassWithRetry(player.UserId, passId)
 		
 		if success and ownsPass then
-			print("✅ " .. player.Name .. " authorized via Game Pass: " .. passId)
+			print("✅" .. player.Name .. " authorized via Game Pass: " .. passId)
 			return true
 		elseif not success then
 			-- API error - be lenient and let them in with a warning
-			warn("⚠️ Could not verify Game Pass for " .. player.Name .. ". Allowing access due to API error.")
+			warn("Could not verify Game Pass for " .. player.Name .. ". Allowing access due to API error.")
 			return true
 		end
 	end
 	
 	-- 3. If no conditions are met, kick them
-	print("❌ " .. player.Name .. " denied access - no valid credentials found.")
+	print("❌" .. player.Name .. " denied access - no valid credentials found.")
 	
 	-- Ensure player is still in game before kicking
 	if player.Parent then
@@ -145,7 +145,7 @@ local function setupAdminCommands()
 				local targetPlayer = Players:FindFirstChild(args[2])
 				if targetPlayer then
 					SETTINGS.WHITELISTED_IDS[targetPlayer.UserId] = targetPlayer.Name
-					print("✅ Added " .. targetPlayer.Name .. " to whitelist.")
+					print("Added " .. targetPlayer.Name .. " to whitelist.")
 				end
 			end
 			
@@ -154,7 +154,7 @@ local function setupAdminCommands()
 				local targetPlayer = Players:FindFirstChild(args[2])
 				if targetPlayer then
 					SETTINGS.WHITELISTED_IDS[targetPlayer.UserId] = nil
-					print("❌ Removed " .. targetPlayer.Name .. " from whitelist.")
+					print("Removed " .. targetPlayer.Name .. " from whitelist.")
 				end
 			end
 		end)
