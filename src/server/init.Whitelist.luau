@@ -164,6 +164,6 @@ end
 -- Uncomment to enable admin commands
 -- setupAdminCommands()
 
-print("🔒 Whitelist System loaded successfully!")
-print("📋 Whitelisted Users: " .. #SETTINGS.WHITELISTED_IDS)
-print("🎫 Required Game Passes: " .. #SETTINGS.GAMEPASS_IDS)
+print("Whitelist System loaded successfully!")
+print("Whitelisted Users: " .. #SETTINGS.WHITELISTED_IDS)
+print("Required Game Passes: " .. #SETTINGS.GAMEPASS_IDS)
